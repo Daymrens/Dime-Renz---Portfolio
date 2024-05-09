@@ -4,17 +4,116 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio Website | Dime Renz</title>
-    <!-- Linking CSS File -->
-    <link rel="stylesheet" href="/css/style.css" />
+    
     <!-- Fontawesome link -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- Bootstrap link -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <style>
+/* Color variables */
+:root {
+  --white-color: #fff;
+  --bg-color: #fff;
+  --gray-color: #ccc;
+}
+
+/* Changing background color */
+body {
+  background: var(--bg-color) !important;
+}
+
+/* Changing link color */
+.nav-item .nav-link {
+  color: var(--white-color);
+}
+
+/* Hero section background image */
+.hero {
+  height: 100vh;
+  background-image: url("/images/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#skills i {
+  height: 100px;
+  width: 100px;
+}
+
+#portfolio img {
+  height: 300px;
+  object-fit: cover;
+}
+
+#about .img,
+#about img,
+.hire-text h2 {
+  position: relative;
+}
+
+/* Timeline background line */
+#about .img::before {
+  content: "";
+  left: 50%;
+  width: 4px;
+  position: absolute;
+  height: calc(100% + 140px);
+  background: var(--gray-color);
+}
+
+#about img,
+#about .hire-text h2 {
+  width: 140px;
+}
+
+#about .hire-text h2 {
+  height: 140px;
+}
+
+.social-icons a {
+  width: 40px;
+  height: 40px;
+}
+
+footer .social-icons a {
+  width: 30px;
+  height: 30px;
+}
+
+#cv img {
+  width: 230px;
+}
+
+/* Contact section background image */
+#contact {
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-image: url("../images/contactbg.jpg");
+}
+
+@media screen and (max-width: 990px) {
+  #skills .card {
+    width: calc(100% / 2 - 10px) !important;
+  }
+}
+
+@media screen and (max-width: 668px) {
+  #skills .card,
+  #portfolio .card-wrapper {
+    width: 100% !important;
+  }
+}
+
+
+
+    </style>
   </head>
   <body>
     <!-- Header & Navbar -->
     <header class="bg-dark fixed-top">
-      <nav class="container-xxl navbar navbar-expand-lg py-3 bg-dark navbar-dark">
+      <nav class="container-xxl navbar navbar-expand-lg py-3 bg-dark navbar-dark" >
         <div class="container-fluid">
           <a class="navbar-brand fw-bold fs-3" href="#">Deme</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -43,7 +142,7 @@
     </header>
 
     <!-- Hero or Showcase Section -->
-    <section class="hero d-flex flex-column align-items-center justify-content-center">
+    <section class="hero d-flex flex-column align-items-center justify-content-center" style="background-image: url('images/background.jpg');">
       <div class="text-center">
         <h1 class="h1 text-white fw-medium fst-italic">Dime Renz Apor</h1>
         <h2 class="display-3 text-white fw-bold">Computer Science student</h2>
@@ -88,10 +187,10 @@
         <div class="row mt-5 mx-0 justify-content-center align-items-center">
           <div class="col-lg-3 col-md-4 col-12 card-wrapper">
             <div class="card mt-4">
-              <img src="images/ecommerce.png" class="img-fluid" alt="portfolio-img">
+              <img src="images/Respondive web portfolio img.png" class="img-fluid" alt="portfolio-img">
               <div class="card-body text-center">
-                <h6 class="card-title">E-commerce Website</h6>
-                <p class="card-text text-secondary">HTML/CSS/JavaScript</p>
+                <h6 class="card-title">Responsive Web Portfolio</h6>
+                <p class="card-text text-secondary">HTML/CSS/JavaScript/Bootsrap</p>
               </div>
             </div>
           </div>
@@ -99,7 +198,7 @@
             <div class="card mt-4">
               <img src="images/landing-page.jpg" class="img-fluid" alt="portfolio-img">
               <div class="card-body text-center">
-                <h6 class="card-title">Responsive Landing Page</h6>
+                <h6 class="card-title">Web Dev Website</h6>
                 <p class="card-text text-secondary">HTML/CSS/Bootstrap</p>
               </div>
             </div>
@@ -115,28 +214,46 @@
           </div>
           <div class="col-lg-3 col-md-4 card-wrapper">
             <div class="card mt-4">
-              <img src="images/blog.jpg" class="img-fluid" alt="portfolio-img">
+              <img src="images/lakbaibg.jpg" class="img-fluid" alt="portfolio-img">
               <div class="card-body text-center">
-                <h6 class="card-title">Blog Website</h6>
-                <p class="card-text text-secondary">HTML/CSS/PHP</p>
+                <h6 class="card-title">Lak.Bai Tours System</h6>
+                <p class="card-text text-secondary">C#/WindowsFormApplication</p>
               </div>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 card-wrapper">
             <div class="card mt-4">
-              <img src="images/react.jpg" class="img-fluid" alt="portfolio-img">
+              <img src="images/dartbg.png" class="img-fluid" alt="portfolio-img">
               <div class="card-body text-center">
-                <h6 class="card-title">Task Management App</h6>
-                <p class="card-text text-secondary">ReactJS</p>
+                <h6 class="card-title">Dart Tally Board</h6>
+                <p class="card-text text-secondary">C#/WindowsFormApplication</p>
               </div>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 card-wrapper">
             <div class="card mt-4">
-              <img src="images/python.jpg" class="img-fluid" alt="portfolio-img">
+              <img src="images/bingobg.png" class="img-fluid" alt="portfolio-img">
               <div class="card-body text-center">
-                <h6 class="card-title">Data Visualization</h6>
-                <p class="card-text text-secondary">Python/Plotly</p>
+                <h6 class="card-title">Bingo Game System</h6>
+                <p class="card-text text-secondary">C#/WindowsFormApplication</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 card-wrapper">
+            <div class="card mt-4">
+              <img src="images/posbg.jpg" class="img-fluid" alt="portfolio-img">
+              <div class="card-body text-center">
+                <h6 class="card-title">POS - Winforms</h6>
+                <p class="card-text text-secondary">C#/WindowsFormApplication</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 card-wrapper">
+            <div class="card mt-4">
+              <img src="images/posconsolebg.png" class="img-fluid" alt="portfolio-img">
+              <div class="card-body text-center">
+                <h6 class="card-title">POS Console System</h6>
+                <p class="card-text text-secondary">C#</p>
               </div>
             </div>
           </div>
@@ -154,7 +271,7 @@
       </div>
       <div class="row flex-row-reverse flex-md-row mt-5 pt-5">
         <div class="col-9 col-md-5 text-md-end">
-          <h5>1995-2008</h5>
+          <h5>2015-2016</h5>
           <h5>Early Passion for Technology</h5>
           <p>From an early age, I became fascinated with computers and programming. Starting with basic HTML and CSS, I gradually expanded my skills to include JavaScript and various frameworks.</p>
         </div>
@@ -167,14 +284,14 @@
           <img class="rounded-circle border border-5 border-dark-subtle img-fluid" src="images/about-img-2.jpg" alt="img">
         </div>
         <div class="col-9 col-md-5">
-          <h5>2008-2014</h5>
+          <h5>2016-2022</h5>
           <h5>Higher Education and Career Growth</h5>
           <p>During my university years, I studied computer science and gained hands-on experience through internships and freelance projects. This period fueled my passion for creating innovative solutions and solving complex problems.</p>
         </div>
       </div>
       <div class="row flex-row-reverse flex-md-row mt-5 pt-5">
         <div class="col-9 col-md-5 text-md-end">
-          <h5>2014-Present</h5>
+          <h5>2023-Present</h5>
           <h5>Professional Excellence and Continuous Learning</h5>
           <p>Throughout my career, I have consistently sought opportunities to refine my skills and stay updated with the latest technologies. I strive for excellence in every project I undertake and aim to deliver valuable and impactful results.</p>
         </div>
@@ -232,59 +349,62 @@
           </ul>
           <h5>Personal Interests</h5>
           <ul class="list-unstyled">
-            <li>Interest 1</li>
-            <li>Interest 2</li>
-            <li>Interest 3</li>
+            <li>Playing Bass / Instruments</li>
+            <li>Coding</li>
+            <li>Gaming</li>
             <!-- Add or remove interests as needed -->
           </ul>
         </div>
         <div class="col-lg-7 order-lg-1 order-0 mt-5 text-start">
           <h3>Profile</h3>
           <hr>
-          <p>Write a brief description of yourself, your background, and your goals. Highlight your key strengths and experiences.</p>
+          <p>As a second-year computer science student, I'm driven by a passion for problem-solving and a curiosity about technology's impact. With a strong foundation in mathematics and programming languages like Python, Java, and C#, I excel at tackling complex challenges and algorithms. My adaptability and quick learning enable me to stay updated on the latest advancements in the field, from machine learning to cybersecurity. I value teamwork and effective communication, which I've honed through group projects. My goal is to leverage my skills to contribute meaningfully to the tech industry, whether through innovative software solutions, research, or advocating for inclusivity.</p>
           <h3>Highlights of Qualifications</h3>
           <hr>
           <ul>
-            <li>Qualification 1</li>
-            <li>Qualification 2</li>
-            <li>Qualification 3</li>
+            <li>Pogi</li>
+            <li>Pato</li>
+            <li>Lorem</li>
             <!-- Add or remove qualifications as needed -->
           </ul>
           <h3>Education</h3>
           <hr>
           <dl>
-            <dt>Year - Year</dt>
-            <dd>University/Institution</dd>
-            <dd>Degree/Program</dd>
+            <dt>2010 - 2016</dt>
+            <dd>Damolog, Elementary School</dd>
+            <dd>Elementary Level</dd>
           </dl>
-          <h3>Additional Courses & Training</h3>
-          <hr>
           <dl>
-            <dt>Year</dt>
-            <dd>Course/Training</dd>
-            <dd>Institution/Organization</dd>
+            <dt>2016 - 2022</dt>
+            <dd>Gabriel Jurado Foundation School, Inc.</dd>
+            <dd>General Academic Strand</dd>
+          </dl>
+          <dl>
+            <dt>2022 - 2024(Present)</dt>
+            <dd>Asian College of Technology</dd>
+            <dd>Bachelor of Science in Computer Science</dd>
           </dl>
           <h3>Work Experience</h3>
           <hr>
           <dl>
-            <dt>Year - Year</dt>
-            <dd>Job Position</dd>
-            <dd>Company/Organization</dd>
+            <dt>2024 - Present</dt>
+            <dd>Web Developer</dd>
+            <dd>Denco Solutions</dd>
             <!-- Add or remove work experience entries as needed -->
           </dl>
           <h3>Extracurricular Activities</h3>
           <hr>
           <dl>
-            <dt>Organization Name</dt>
-            <dd>Role/Position</dd>
-            <dd>Details of your involvement and contributions</dd>
+            <dt>Denco Solutions</dt>
+            <dd>Front Developer / UX Developer </dd>
+            <dd>Since 2024</dd>
           </dl>
         </div>
       </div>      
     </section>
 
      <!-- Contact Section -->
-     <section class="py-5" id="contact">
+     <section class="py-5" id="contact" style="background-image: url(images/contactbg.jpg)">
       <div class="container-xxl py-5">
         <div class="col-12 d-flex flex-column text-center justify-content-center">
           <h2 class="text-white">CONTACT ME</h2>
@@ -326,7 +446,7 @@
      <!-- Footer -->
      <footer>
       <div class="container-xxl flex-wrap pt-3 d-flex align-items-center justify-content-between">
-        <p>Copyright © 2023 James Anderson</p>
+        <p>Copyright © 2024 Dime Renz Apor</p>
         <ul class="social-icons d-flex">
           <a href="#" class="bg-primary mx-2 text-white d-flex align-items-center justify-content-center text-decoration-none rounded-circle"><small><i class="fa-brands fa-twitter"></i></small></a>
           <a href="#" class="bg-primary mx-2 text-white d-flex align-items-center justify-content-center text-decoration-none rounded-circle"><small><i class="fa-brands fa-facebook-f"></i></small></a>
